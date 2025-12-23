@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Near Complexity | Automation Tools</title>
-   
+  
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-   
+  
     <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-   
+  
     <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Google Fonts -->
@@ -63,7 +63,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="m10 7 5 3-5 3Z"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
         );
         const IconTerminal = ({ className }) => (
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="4 17 10 11 4 5"/></svg>
         );
         const IconShieldAlert = ({ className }) => (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
@@ -89,18 +89,19 @@
             details: {
               intro: "The BEST TOOL ONLINE for any Content Creator or Clipper! (Windows Only). Download videos and clips using timestamps from almost ANY media hosting website and INSTANTLY convert them into 100% lossless quality files compatible with Premiere Pro, DaVinci Resolve, and more.",
               capabilities: [
-                "Download INFINITE clips via 'Clips (Bulk)' feature",
-                "Native quality Video, Audio, and YouTube Thumbnails",
-                "Convert Audio to WAV or MP3 automatically",
-                "Generate full transcribed Audio to Text with Whisper (accurate timestamps)",
-                "Extract Title, Description, Tags, and Comments"
+                "Download Clips using timestamps",
+                "Download INFINITE amount of Clips from INFINITE amount of videos with ONE CLICK via the 'Clips (Bulk)' Feature",
+                "Download Full Videos NATIVE quality Video and Audio quality",
+                "Download Audio with OPUS Native quality and automatic lossless conversion into WAV or MP3",
+                "Download YouTube Thumbnails NATIVE quality and resolution",
+                "Download/Generate (Whisper) FULL transcribed Audio to Text with extreme accuracy (Togglable accurate Timestamps for each sentence)",
+                "Download Video Information - Title, Description and TAGS",
+                "Download all Comments and Replies with usernames"
               ],
               requirements: [
-                "Windows OS",
-                "Node.JS (Installer included)",
-                "Browser extension for cookies (to bypass bot detection)"
+                "Windows 10/11"
               ],
-              disclaimer: "ClipperKIT+ is to be used under fair use copyright laws. We do not condone stealing content. Use this tool to speed up your creative workflow responsibly."
+              disclaimer: "DISCLAIMER! ClipperKIT+ is only to be used in the specified ways above! Any other use of it that will land you into trouble with the law like breaking fair use copyright law is none of our responsibility. This tool is 100% legal if you use it complying with fair use laws, so make sure to sharpen your fair use knowledge before obtaining this tool. As a content creator that's going to use this tool to speed up content creation RESPECT other content creators, don't steal content!"
             }
           },
           {
@@ -128,9 +129,9 @@
                 "Save macros to disk and load them later"
               ],
               requirements: [
-                "Windows OS"
+                "Windows 10/11"
               ],
-              disclaimer: "Designed to help millions of people do their work more efficiently."
+              disclaimer: "This tool is designed to automate manual work on your computer. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
             }
           },
           {
@@ -158,10 +159,10 @@
                 "Natural sentence generation option"
               ],
               requirements: [
-                "Nvidia GPU recommended for speed (CUDA)",
-                "Works on CPU (slower)"
+                "Windows 10/11",
+                "Nvidia GPU with CUDA cores (Highly recommended)"
               ],
-              disclaimer: "Perfect for creating scripts from existing media or generating quick subtitles for social media content."
+              disclaimer: "This tool was used to create transcriptions and subtitles. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
             }
           }
         ];
@@ -268,12 +269,12 @@
                   {product.category}
                 </span>
               </div>
-             
+            
               <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
               <p className="text-slate-400 mb-6 flex-grow leading-relaxed">
                 {product.shortDescription}
               </p>
-             
+            
               <ul className="space-y-3 mb-8">
                 {product.features.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-sm text-slate-300">
@@ -306,7 +307,7 @@
           const [isMenuOpen, setIsMenuOpen] = useState(false);
           return (
             <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30">
-             
+            
               {/* --- NAVBAR --- */}
               <nav className="fixed top-0 w-full z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -396,7 +397,7 @@
                       <p className="text-slate-400">Professional grade tools available for instant download.</p>
                     </div>
                   </div>
-                 
+                
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {products.map((product) => (
                       <ProductCard
@@ -446,23 +447,8 @@
                             <IconCheckCircle2 className="text-green-400 w-6 h-6" />
                           </div>
                           <div>
-                            <div className="font-bold text-white">Verified Secure</div>
-                            <div className="text-xs text-slate-500">All tools tested and malware free</div>
-                          </div>
-                        </div>
-                        <div className="space-y-4">
-                          <div className="h-2 bg-slate-800 rounded-full w-full"></div>
-                          <div className="h-2 bg-slate-800 rounded-full w-3/4"></div>
-                          <div className="h-2 bg-slate-800 rounded-full w-5/6"></div>
-                        </div>
-                        <div className="mt-8 pt-6 border-t border-slate-800 flex justify-between items-center">
-                          <span className="text-slate-400">Trusted by creators worldwide</span>
-                          <div className="flex -space-x-2">
-                            {[1,2,3,4].map(i => (
-                              <div key={i} className="w-8 h-8 rounded-full bg-slate-700 border-2 border-slate-950 flex items-center justify-center text-xs text-white">
-                                {i}
-                              </div>
-                            ))}
+                            <div className="font-bold text-white">Verified and Secure</div>
+                            <div className="text-xs text-slate-500">and all tools tested and malware free</div>
                           </div>
                         </div>
                       </div>
@@ -485,7 +471,7 @@
                         Developing the next generation of automation tools.
                       </p>
                     </div>
-                   
+                  
                     <div>
                       <h3 className="text-white font-bold mb-4">Support</h3>
                       <ul className="space-y-2 text-sm text-slate-400">
@@ -507,7 +493,7 @@
                       </a>
                     </div>
                   </div>
-                 
+                
                   <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600">
                     <p>&copy; {new Date().getFullYear()} Near Complexity. All rights reserved.</p>
                     <p>Designed for Efficiency.</p>
