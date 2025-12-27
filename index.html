@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Near Complexity | Automation Tools</title>
-  
+ 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-  
+ 
     <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  
+ 
     <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Google Fonts -->
@@ -71,12 +71,113 @@
         // --- DATA ---
         const products = [
           {
+            id: 'filelibrary',
+            name: 'FileLibrary+',
+            tagline: 'Speed Up Your Workflow with Instant File Access',
+            icon: <IconFolderCC className="w-12 h-12 text-orange-400" />,
+            shortDescription: 'Create customizable libraries of folders and files for one-click access. Switch between presets for different workflows and search instantly.',
+            price: '€8',
+            gumroadLink: 'https://nearcomplexity.gumroad.com/l/FileLibrary',
+            category: 'Productivity Tools',
+            features: [
+              'One-click folder and file access',
+              'Custom presets for workflows',
+              'Real-time search filtering',
+              'Save, load, and manage presets',
+              'Supports any file type'
+            ],
+            details: {
+              intro: "FileLibrary+ is the best tool online for speeding up computer work by creating a customizable library of folders and files accessible with one click via presets for various workflows. It eliminates manual searching by providing instant access and search functionality within the library.",
+              capabilities: [
+                "Open folder shortcuts with one click",
+                "Open any file (text, exe, programs, games) with one click",
+                "Create presets for custom libraries (e.g., Editing, Writing, Coding)",
+                "Real-time filter search box to find files and folders inside the library of shortcuts",
+                "Save presets, reset presets, delete presets, and customize presets with ease"
+              ],
+              requirements: [
+                "Windows 10/11"
+              ],
+              disclaimer: ""
+            }
+          },
+          {
+            id: 'transcribesubtitles',
+            name: 'TranscribeSubtitles+',
+            tagline: 'Local AI Transcription & Subtitling',
+            icon: <IconFolderCC className="w-12 h-12 text-emerald-400" />,
+            shortDescription: 'Transcribe local video and audio files into text or SRT subtitles using Whisper models. Runs on GPU or CPU with adjustable settings for accuracy and format.',
+            price: '€10',
+            gumroadLink: 'https://nearcomplexity.gumroad.com/l/TranscribeSubtitles',
+            category: 'AI Tools',
+            features: [
+              'Runs Locally (Privacy Focused)',
+              'Uses Whisper Models (Small to Large)',
+              'GPU Acceleration (Nvidia CUDA)',
+              'Adjustable Subtitle Word Limits',
+              'Export to SRT or Text'
+            ],
+            details: {
+              intro: "TranscribeSubtitles+ is the best tool online for transcribing local video and audio files into text transcriptions or subtitles (SRT) using Whisper models for high accuracy. It supports adjustable subtitle customization for different video lengths and provides options for timestamped or plain text outputs, enhancing video editing workflows.",
+              capabilities: [
+                "Transcribes local video files and audio files into text transcriptions or subtitles (SRT).",
+                "Runs locally on your machine using GPU (Nvidia CUDA) or CPU.",
+                "Uses Whisper with model choices from Small to Large for transcription accuracy.",
+                "Generates adjustable subtitles that can be customized to display a specific number of words at a time, timed to match spoken audio.",
+                "For short videos (e.g., YouTube Shorts or TikToks): Set maximum word limit to 3.",
+                "For longer videos (e.g., documentaries): Set maximum word limit to 10.",
+                "Default: One sentence at a time if maximum word count is left blank.",
+                "Text transcriptions can include timestamps or be plain text without them.",
+                "Useful for extracting key information, creating scripts for editing or reference."
+              ],
+              requirements: [
+                "Windows 10/11",
+                "Nvidia GPU with CUDA cores (Highly recommended)"
+              ],
+              disclaimer: "This tool was used to create transcriptions and subtitles. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
+            }
+          },
+          {
+            id: 'mousekeyrecorder',
+            name: 'MouseKeyRecorder+',
+            tagline: 'Automate Boring Tasks Instantly',
+            icon: <IconMouse className="w-12 h-12 text-purple-400" />,
+            shortDescription: 'Record mouse movements, clicks, and keystrokes, then replay them at adjustable speeds. Save and load macros for efficient automation.',
+            price: '€10',
+            gumroadLink: 'https://nearcomplexity.gumroad.com/l/MouseKeyRecorder',
+            category: 'Automation',
+            features: [
+              'Record Mouse Paths & Clicks',
+              'Record Keystrokes & Hotkeys',
+              'Variable Playback Speed',
+              'Save & Load Recordings',
+              'CPU Usage Monitoring'
+            ],
+            details: {
+              intro: "MouseKeyRecorder+ is the BEST TOOL ONLINE for recording mouse movements and keystrokes, enabling efficient automation of manual processes through repeatable playback.",
+              capabilities: [
+                "Records mouse movements and keystrokes",
+                "Plays back recordings in the exact sequence recorded",
+                "Supports hotkeys (e.g., Ctrl+C, Ctrl+V)",
+                "Displays live recording time and playback time",
+                "Shows live CPU usage",
+                "Optimized for performance without losing accuracy",
+                "Allows saving and loading of recordings",
+                "Playback speed can be adjusted"
+              ],
+              requirements: [
+                "Windows 10/11"
+              ],
+              disclaimer: "This tool is designed to automate manual work on your computer. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
+            }
+          },
+          {
             id: 'clipperkit',
             name: 'ClipperKIT+',
             tagline: 'The Ultimate Content Downloader & Converter',
             icon: <IconDownload className="w-12 h-12 text-cyan-400" />,
-            shortDescription: 'Download videos/clips from almost any site, convert to lossless h264 mp4, and extract SEO data (titles, tags, transcripts).',
-            price: 'View Price',
+            shortDescription: 'Download videos, clips, audio, and metadata from major platforms. Convert to lossless formats and extract SEO data for content creation.',
+            price: '$15',
             gumroadLink: 'https://nearcomplexity.gumroad.com/l/ClipperKIT',
             category: 'Video Tools',
             features: [
@@ -87,82 +188,22 @@
               'Whisper AI Audio-to-Text Transcription'
             ],
             details: {
-              intro: "The BEST TOOL ONLINE for any Content Creator or Clipper! (Windows Only). Download videos and clips using timestamps from almost ANY media hosting website and INSTANTLY convert them into 100% lossless quality files compatible with Premiere Pro, DaVinci Resolve, and more.",
+              intro: "The BEST TOOL ONLINE for any Content Creator or Clipper! Download videos and clips using timestamps from almost ANY media hosting website and instantly convert to 100% lossless quality h264 mp4 files for editing software like Premiere Pro, DaVinci Resolve, Wondershare Filmora. Extract info like title, description, tags, comments, and transcriptions for SEO optimization in your niche.",
               capabilities: [
-                "Download Clips using timestamps",
-                "Download INFINITE amount of Clips from INFINITE amount of videos with ONE CLICK via the 'Clips (Bulk)' Feature",
-                "Download Full Videos NATIVE quality Video and Audio quality",
-                "Download Audio with OPUS Native quality and automatic lossless conversion into WAV or MP3",
-                "Download YouTube Thumbnails NATIVE quality and resolution",
-                "Download/Generate (Whisper) FULL transcribed Audio to Text with extreme accuracy (Togglable accurate Timestamps for each sentence)",
-                "Download Video Information - Title, Description and TAGS",
-                "Download all Comments and Replies with usernames"
-              ],
-              requirements: [
-                "Windows 10/11"
-              ],
-              disclaimer: "DISCLAIMER! ClipperKIT+ is only to be used in the specified ways above! Any other use of it that will land you into trouble with the law like breaking fair use copyright law is none of our responsibility. This tool is 100% legal if you use it complying with fair use laws, so make sure to sharpen your fair use knowledge before obtaining this tool. As a content creator that's going to use this tool to speed up content creation RESPECT other content creators, don't steal content!"
-            }
-          },
-          {
-            id: 'mousekeyrecorder',
-            name: 'MouseKeyRecorder+',
-            tagline: 'Automate Boring Tasks Instantly',
-            icon: <IconMouse className="w-12 h-12 text-purple-400" />,
-            shortDescription: 'Record your mouse movements and keystrokes, then play them back perfectly. Save and load macros for repetitive tasks.',
-            price: 'View Price',
-            gumroadLink: 'https://nearcomplexity.gumroad.com/l/MouseKeyRecorder',
-            category: 'Automation',
-            features: [
-              'Record Mouse Paths & Clicks',
-              'Record Keystrokes',
-              'Variable Playback Speed',
-              'Save & Load Recordings',
-              'Infinite Loop Playback'
-            ],
-            details: {
-              intro: "The BEST TOOL ONLINE for recording mouse movements and key strokes then playing them back to you!",
-              capabilities: [
-                "Automate boring manual processes",
-                "Replay in exact sequence",
-                "Control playback speed",
-                "Save macros to disk and load them later"
-              ],
-              requirements: [
-                "Windows 10/11"
-              ],
-              disclaimer: "This tool is designed to automate manual work on your computer. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
-            }
-          },
-          {
-            id: 'transcribesubtitles',
-            name: 'TranscribeSubtitles+',
-            tagline: 'Local AI Transcription & Subtitling',
-            icon: <IconFolderCC className="w-12 h-12 text-emerald-400" />,
-            shortDescription: 'Transcribe video and audio files locally using your GPU. Generate accurate SRT subtitles compatible with editing software.',
-            price: 'View Price',
-            gumroadLink: 'https://nearcomplexity.gumroad.com/l/qnlczv',
-            category: 'AI Tools',
-            features: [
-              'Runs Locally (Privacy Focused)',
-              'Uses OpenAI Whisper Models (Small to Large)',
-              'GPU Acceleration (Nvidia CUDA)',
-              'Adjustable Subtitle Word Limits (TikTok/Shorts optimized)',
-              'Export to SRT'
-            ],
-            details: {
-              intro: "The BEST TOOL ONLINE for transcribing local video/audio files into text transcriptions or subtitles (SRT). Runs locally on your machine using your GPU (Nvidia CUDA) or CPU.",
-              capabilities: [
-                "Supports all Whisper models (Small to Large for highest accuracy)",
-                "Adjustable word count per subtitle (e.g., 3 words for Shorts, 10 for Documentaries)",
-                "Generate transcripts with or without timestamps",
-                "Natural sentence generation option"
+                "Download clips using timestamps",
+                "Download infinite amount of clips from infinite amount of videos with one click via 'Clips (Bulk)' feature",
+                "Download full videos in native quality video and audio",
+                "Download audio with OPUS native quality and automatic lossless conversion into WAV or MP3",
+                "Download YouTube thumbnails in native quality and resolution",
+                "Download/generate (Whisper) full transcribed audio to text with extreme accuracy (togglable accurate timestamps for each sentence)",
+                "Download video information: title, description, and tags",
+                "Download all comments and replies with usernames"
               ],
               requirements: [
                 "Windows 10/11",
-                "Nvidia GPU with CUDA cores (Highly recommended)"
+                "Node.JS (installs automatically if not present)"
               ],
-              disclaimer: "This tool was used to create transcriptions and subtitles. We bear no responsibility if you choose to use the tool outside of that scope and get in trouble."
+              disclaimer: "ClipperKIT+ is only to be used in the specified ways above! Any other use of it that will land you into trouble with the law like breaking fair use copyright law is none of our responsibility. This tool is 100% legal if you use it complying with fair use laws, so make sure to sharpen your fair use knowledge before obtaining this tool. As a content creator that's going to use this tool to speed up content creation RESPECT other content creators, don't steal content!"
             }
           }
         ];
@@ -269,12 +310,13 @@
                   {product.category}
                 </span>
               </div>
-            
+           
               <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
+              <p className="text-indigo-400 font-bold text-xl mb-4">{product.price}</p>
               <p className="text-slate-400 mb-6 flex-grow leading-relaxed">
                 {product.shortDescription}
               </p>
-            
+           
               <ul className="space-y-3 mb-8">
                 {product.features.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-sm text-slate-300">
@@ -307,7 +349,7 @@
           const [isMenuOpen, setIsMenuOpen] = useState(false);
           return (
             <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30">
-            
+           
               {/* --- NAVBAR --- */}
               <nav className="fixed top-0 w-full z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,7 +439,7 @@
                       <p className="text-slate-400">Professional grade tools available for instant download.</p>
                     </div>
                   </div>
-                
+               
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {products.map((product) => (
                       <ProductCard
@@ -471,7 +513,7 @@
                         Developing the next generation of automation tools.
                       </p>
                     </div>
-                  
+                 
                     <div>
                       <h3 className="text-white font-bold mb-4">Support</h3>
                       <ul className="space-y-2 text-sm text-slate-400">
@@ -493,7 +535,7 @@
                       </a>
                     </div>
                   </div>
-                
+               
                   <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600">
                     <p>&copy; {new Date().getFullYear()} Near Complexity. All rights reserved.</p>
                     <p>Designed for Efficiency.</p>
