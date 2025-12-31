@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Near Complexity | Automation Tools</title>
- 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
- 
     <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
- 
     <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Google Fonts -->
@@ -67,6 +64,9 @@
         );
         const IconShieldAlert = ({ className }) => (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        );
+        const IconClock = ({ className }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         );
         // --- DATA ---
         const products = [
@@ -205,6 +205,43 @@
               ],
               disclaimer: "ClipperKIT+ is only to be used in the specified ways above! Any other use of it that will land you into trouble with the law like breaking fair use copyright law is none of our responsibility. This tool is 100% legal if you use it complying with fair use laws, so make sure to sharpen your fair use knowledge before obtaining this tool. As a content creator that's going to use this tool to speed up content creation RESPECT other content creators, don't steal content!"
             }
+          },
+          {
+            id: 'workclock',
+            name: 'WorkClock+',
+            tagline: 'The BEST TOOL ONLINE for speeding up your work on computer by allowing you to track your work hours, overtime, and statistics with ease.',
+            icon: <IconClock className="w-12 h-12 text-blue-400" />,
+            shortDescription: 'WorkClock+ is a software where you can track your daily work hours by clocking in and out, start overtime sessions, and generate summaries of your total work time.',
+            price: '€10',
+            gumroadLink: 'https://nearcomplexity.gumroad.com/l/WorkClock',
+            category: 'Productivity Tools',
+            features: [
+              'Clock in/out with one click to track standard work hours',
+              'Start and finish overtime sessions separately',
+              'View real-time clock and status updates',
+              'Generate statistics for today, current month, or all time (including breakdowns of standard vs. overtime hours)',
+              'Set worker names, save directories, and optional monthly folders for organized logs',
+              'Handle date changes automatically in logs for accurate tracking'
+            ],
+            details: {
+              intro: "Instead of manually calculating your work time or using complicated spreadsheets, you can clock in/out, manage overtime, and view detailed stats for today, this month, or all time—all in one simple app!",
+              capabilities: [
+                "Track daily work hours by clocking in and out",
+                "Manage overtime sessions",
+                "Generate summaries of total work time",
+                "Set up worker names",
+                "Save directories for logs",
+                "Select optional months for organized storage",
+                "Create work days and continue existing ones",
+                "Handle extra overtime sessions",
+                "View comprehensive statistics like total hours worked across periods",
+                "Keep logs in text files for easy access"
+              ],
+              requirements: [
+                "Windows 10/11"
+              ],
+              disclaimer: ""
+            }
           }
         ];
         // --- COMPONENTS ---
@@ -310,13 +347,13 @@
                   {product.category}
                 </span>
               </div>
-           
+          
               <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
               <p className="text-indigo-400 font-bold text-xl mb-4">{product.price}</p>
               <p className="text-slate-400 mb-6 flex-grow leading-relaxed">
                 {product.shortDescription}
               </p>
-           
+          
               <ul className="space-y-3 mb-8">
                 {product.features.slice(0, 3).map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-sm text-slate-300">
@@ -349,7 +386,7 @@
           const [isMenuOpen, setIsMenuOpen] = useState(false);
           return (
             <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30">
-           
+          
               {/* --- NAVBAR --- */}
               <nav className="fixed top-0 w-full z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -439,7 +476,7 @@
                       <p className="text-slate-400">Professional grade tools available for instant download.</p>
                     </div>
                   </div>
-               
+              
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {products.map((product) => (
                       <ProductCard
@@ -513,7 +550,7 @@
                         Developing the next generation of automation tools.
                       </p>
                     </div>
-                 
+                
                     <div>
                       <h3 className="text-white font-bold mb-4">Support</h3>
                       <ul className="space-y-2 text-sm text-slate-400">
@@ -535,7 +572,7 @@
                       </a>
                     </div>
                   </div>
-               
+              
                   <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600">
                     <p>&copy; {new Date().getFullYear()} Near Complexity. All rights reserved.</p>
                     <p>Designed for Efficiency.</p>
